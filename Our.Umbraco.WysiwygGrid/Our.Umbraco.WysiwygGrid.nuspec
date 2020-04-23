@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Our.Umbraco.WysiwygGrid</id>
+        <version>1.0.0-beta01</version>
+        <title>Our Umbraco WYSIWYG Grid</title>
+        <authors>Lars-Erik Aabech</authors>
+        <owners>Lars-Erik Aabech</owners>
+        <projectUrl>https://github.com/lars-erik/Our.Umbraco.WysiwygGrid</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Overrides for the Umbraco Grid to allow styling and multiple class settings in the backoffice </description>
+        <releaseNotes></releaseNotes>
+        <copyright>Copyright 2020 Lars-Erik Aabech</copyright>
+        <tags>Umbraco Grid</tags>
+        <license type="expression">MIT</license>
+    </metadata>
+    <files>
+        <file src="App_Plugins/Our.Umbraco.WysiwygGrid/**/*.*" target="Content"/>
+    </files>
+</package>

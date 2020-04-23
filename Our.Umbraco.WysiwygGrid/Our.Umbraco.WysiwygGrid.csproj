@@ -264,6 +264,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\Customization\customization.css" />
     <Content Include="App_Plugins\Our.Umbraco.WysiwygGrid\Grid\grid-classes.js" />
     <Content Include="App_Plugins\Our.Umbraco.WysiwygGrid\Grid\style-overrides.css" />
     <Content Include="config\grid.editors.config.js" />
@@ -313,6 +314,8 @@
     <Content Include="App_Plugins\Customization\package.manifest" />
     <Content Include="css\main.scss" />
     <Content Include="css\main.css.map" />
+    <Content Include="Our.Umbraco.WysiwygGrid.nuspec" />
+    <Content Include="App_Plugins\Customization\customization.css.map" />
     <None Include="package-lock.json" />
     <None Include="package.json" />
     <None Include="packages.config" />
