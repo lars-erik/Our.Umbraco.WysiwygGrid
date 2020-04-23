@@ -286,6 +286,7 @@
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
+    <Content Include="css\main.css" />
     <Content Include="css\rte.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
@@ -311,6 +312,7 @@
     <Content Include="App_Plugins\Customization\customization.scss" />
     <Content Include="App_Plugins\Customization\package.manifest" />
     <Content Include="css\main.scss" />
+    <Content Include="css\main.css.map" />
     <None Include="package-lock.json" />
     <None Include="package.json" />
     <None Include="packages.config" />
