@@ -1,0 +1,115 @@
+﻿@inherits UmbracoViewPage<dynamic>
+@using Newtonsoft.Json.Linq
+@using Umbraco.Core
+
+@if (Model != null && Model.sections != null)
+{
+    foreach (var section in Model.sections)
+    {
+        var index = 0;
+        <div class="grid">
+            @foreach (var row in section.rows)
+            {
+                @renderRow(row, true, index++);
+            }
+        </div>
+    }
+}
+
+@helper renderRow(dynamic row, bool singleColumn, int index)
+{
+    string[] fluids = new[]
+    {
+        "full-width"
+    };
+    string rowName = row.Value<string>("name").ToLower();
+    if (fluids.Contains(rowName))
+    {
+        JObject cfg = row.Value<JObject>("config") ?? new JObject();
+        if (cfg.Value<string>("add-container") == "1")
+        {
+            var extraClass = index == 0 ? "is-first-row" : "";
+            <div class="container-fluid @extraClass">
+                <div @RenderElementAttributes(row, "row")>
+                    <div class="container">
+                        @renderAreas(row)
+                    </div>
+                </div>
+            </div>
+
+        }
+        else
+        {
+            <div class="container-fluid">
+                <div @RenderElementAttributes(row, "row")>
+                    @renderAreas(row)
+                </div>
+            </div>
+
+        }
+
+    }
+    else
+    {
+        <div class="container">
+            <div @RenderElementAttributes(row, "row")>
+                @renderAreas(row)
+            </div>
+        </div>
+    }
+}
+
+@helper renderAreas(dynamic row)
+{
+    foreach (var area in row.areas)
+    {
+        <div @RenderElementAttributes(area, "col-md-" + area.grid)>
+            @foreach (var control in area.controls)
+            {
+                if (control != null && control.editor != null && control.editor.view != null)
+                {
+                    <text>@Html.Partial("grid/editors/base", (object)control)</text>
+                }
+            }
+        </div>
+    }
+}
+
+@functions {
+
+    public static MvcHtmlString RenderElementAttributes(dynamic contentItem, string className)
+    {
+        var attrs = new List<string>();
+        JObject cfg = contentItem.Value<JObject>("config") ?? new JObject();
+        var fullClassList = cfg.Value<string>("class") ?? "";
+        string alias = contentItem.Value<string>("name")?.ToString();
+        alias = String.IsNullOrWhiteSpace(alias) ? "" : alias.ToUrlSegment();
+        fullClassList += " " + alias;
+        fullClassList += " " + (className ?? "");
+
+        var otherClasses = String.Join(" ", cfg.Properties().OfType<JProperty>().Where(x => x.Name != "class").Select(x => x.Name + "-" + x.Value));
+
+        attrs.Add("class=\"" + fullClassList + " " + otherClasses + "\"");
+
+        JObject style = contentItem.styles;
+
+        if (style != null)
+        {
+            var cssVals = new List<string>();
+            foreach (JProperty property in style.Properties())
+            {
+                var propertyValue = property.Value.ToString();
+                if (string.IsNullOrWhiteSpace(propertyValue) == false)
+                {
+                    cssVals.Add(property.Name + ":" + propertyValue + ";");
+                }
+            }
+
+            if (cssVals.Any())
+                attrs.Add("style=\"" + HttpUtility.HtmlAttributeEncode(string.Join(" ", cssVals)) + "\"");
+        }
+
+        return new MvcHtmlString(string.Join(" ", attrs));
+    }
+}
+

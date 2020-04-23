@@ -4,7 +4,10 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "build-css": "sass App_Plugins/Our.Umbraco.WysiwygGrid/Grid/style-overrides.scss App_Plugins/Our.Umbraco.WysiwygGrid/Grid/style-overrides.css"
+        "build-css": "sass App_Plugins/Our.Umbraco.WysiwygGrid/Grid/style-overrides.scss App_Plugins/Our.Umbraco.WysiwygGrid/Grid/style-overrides.css",
+        "build-customization": "sass App_Plugins/Customization/customization.scss App_Plugins/Customization/customization.css",
+        "build-front": "sass css/main.scss css/main.css",
+        "build-all":  "npm run build-css & npm run build-customization & npm run build-front" 
     },
     "author": "",
     "license": "ISC",

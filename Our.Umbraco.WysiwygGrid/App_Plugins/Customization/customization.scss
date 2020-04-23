@@ -1,0 +1,26 @@
+﻿.theme {
+    &-normal {
+        color: black;
+    }
+    &-inverse {
+        color: white;
+    }
+}
+
+.padding {
+    &-none {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    &-some {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    &-lots {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+

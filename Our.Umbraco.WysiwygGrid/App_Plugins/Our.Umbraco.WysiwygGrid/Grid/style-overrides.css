@@ -1,11 +1,11 @@
 .umb-grid.stylized-grid .umb-cell-content {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .umb-grid.stylized-grid .umb-cell-content:hover {
   background-color: white;
 }
 .umb-grid.stylized-grid .umb-cell-content.-has-editors {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 .umb-grid.stylized-grid .umb-cell-content.-has-editors:hover {
   background-color: white;
@@ -16,7 +16,15 @@
 .umb-grid.stylized-grid .umb-control-bar, .umb-grid.stylized-grid .umb-grid-has-config {
   font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif !important;
 }
+.umb-grid.stylized-grid .umb-row-inner, .umb-grid.stylized-grid .umb-column-inner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
+}
 .umb-grid.stylized-grid iframe {
+  background-color: transparent;
+}
+.umb-grid.stylized-grid textarea.textstring {
   background-color: transparent;
 }
 

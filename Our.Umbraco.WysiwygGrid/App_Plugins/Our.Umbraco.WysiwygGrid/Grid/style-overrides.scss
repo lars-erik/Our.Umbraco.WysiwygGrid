@@ -1,7 +1,7 @@
-﻿.umb-grid.stylized-grid { 
+﻿.umb-grid.stylized-grid {
 
     .umb-cell-content {
-        background-color: rgba(255, 255, 255, .8);
+        background-color: rgba(255, 255, 255, .2);
     }
 
     .umb-cell-content:hover {
@@ -9,7 +9,7 @@
     }
 
     .umb-cell-content.-has-editors {
-        background-color: rgba(255, 255, 255, .8);
+        background-color: rgba(255, 255, 255, .2);
     }
 
     .umb-cell-content.-has-editors:hover {
@@ -24,7 +24,17 @@
         font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif !important;
     }
 
+    .umb-row-inner, .umb-column-inner {
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position-y: center;
+    }
+
     iframe {
+        background-color: transparent;
+    }
+
+    textarea.textstring {
         background-color: transparent;
     }
 }

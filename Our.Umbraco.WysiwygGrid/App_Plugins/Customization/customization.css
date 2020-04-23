@@ -1,0 +1,21 @@
+.theme-normal {
+  color: black;
+}
+.theme-inverse {
+  color: white;
+}
+
+.padding-none {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.padding-some {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.padding-lots {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/*# sourceMappingURL=customization.css.map */

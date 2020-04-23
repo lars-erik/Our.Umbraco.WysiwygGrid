@@ -286,6 +286,7 @@
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
     <Content Include="config\logviewer.searches.config.js" />
+    <Content Include="css\rte.css" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -307,6 +308,9 @@
     <Content Include="App_Plugins\Our.Umbraco.WysiwygGrid\Grid\style-overrides.css.map" />
     <Content Include="App_Plugins\Our.Umbraco.WysiwygGrid\Grid\style-overrides.scss" />
     <Content Include="App_Plugins\Our.Umbraco.WysiwygGrid\package.manifest" />
+    <Content Include="App_Plugins\Customization\customization.scss" />
+    <Content Include="App_Plugins\Customization\package.manifest" />
+    <Content Include="css\main.scss" />
     <None Include="package-lock.json" />
     <None Include="package.json" />
     <None Include="packages.config" />
@@ -319,6 +323,8 @@
     <Content Include="Views\Partials\Grid\Editors\Base.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
+    <Content Include="Views\Page.cshtml" />
+    <Content Include="Views\Partials\Grid\Bootstrap4.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
