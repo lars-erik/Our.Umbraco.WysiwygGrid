@@ -1,0 +1,15 @@
+{
+    "name": "our.umbraco.wysiwyggrid",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build-css": "sass App_Plugins/Our.Umbraco.WysiwygGrid/Grid/style-overrides.scss App_Plugins/Our.Umbraco.WysiwygGrid/Grid/style-overrides.css"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "bootstrap": "4.4.1",
+        "sass": "1.26.3"
+    }
+}

@@ -1,0 +1,30 @@
+﻿.umb-grid.stylized-grid { 
+
+    .umb-cell-content {
+        background-color: rgba(255, 255, 255, .8);
+    }
+
+    .umb-cell-content:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .umb-cell-content.-has-editors {
+        background-color: rgba(255, 255, 255, .8);
+    }
+
+    .umb-cell-content.-has-editors:hover {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .umb-grid-add-more-content {
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    .umb-control-bar, .umb-grid-has-config {
+        font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif !important;
+    }
+
+    iframe {
+        background-color: transparent;
+    }
+}

@@ -1,0 +1,8 @@
+﻿{
+    "javascript": [
+        "~/App_Plugins/Our.Umbraco.WysiwygGrid/Grid/grid-classes.js"
+    ],
+    "css": [
+        "~/App_Plugins/Our.Umbraco.WysiwygGrid/Grid/style-overrides.css"
+    ]
+}
