@@ -1,39 +1,33 @@
 ﻿.umb-grid.stylized-grid {
-
     .umb-cell-content {
         background-color: rgba(255, 255, 255, .2);
     }
-
     .umb-cell-content:hover {
         background-color: rgba(255, 255, 255, 1);
     }
-
     .umb-cell-content.-has-editors {
         background-color: rgba(255, 255, 255, .2);
     }
-
     .umb-cell-content.-has-editors:hover {
         background-color: rgba(255, 255, 255, 1);
     }
-
     .umb-grid-add-more-content {
         background-color: rgba(255, 255, 255, 1);
     }
-
-    .umb-control-bar, .umb-grid-has-config {
+    .umb-control-bar,
+    .umb-grid-has-config {
         font-family: Lato, Helvetica Neue, Helvetica, Arial, sans-serif !important;
     }
-
-    .umb-row-inner, .umb-column-inner {
+    .umb-row-inner,
+    .umb-column-inner {
         background-repeat: no-repeat;
         background-size: cover;
         background-position-y: center;
+        background-position-x: center;
     }
-
     iframe {
         background-color: transparent;
     }
-
     textarea.textstring {
         background-color: transparent;
     }
