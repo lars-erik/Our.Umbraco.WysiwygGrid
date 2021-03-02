@@ -60,6 +60,9 @@
                     var rowElements = areaElements[ai].getElementsByClassName("umb-row-inner");
                     area.rows.forEach(function (row, ri) {
                         var rowElement = rowElements[ri];
+                        if (rowElement === undefined)
+                        return;
+
                         addClasses(rowElement, row);
                         addStyles(rowElement, row);
 
