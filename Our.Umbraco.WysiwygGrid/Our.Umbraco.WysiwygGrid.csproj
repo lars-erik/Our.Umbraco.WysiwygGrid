@@ -317,6 +317,7 @@
     <Content Include="css\main.css.map" />
     <Content Include="Our.Umbraco.WysiwygGrid.nuspec" />
     <Content Include="App_Plugins\Customization\customization.css.map" />
+    <None Include="build\Our.Umbraco.WysiwygGrid.targets" />
     <None Include="package-lock.json" />
     <None Include="package.json" />
     <None Include="packages.config" />

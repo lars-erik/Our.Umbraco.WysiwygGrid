@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>Our.Umbraco.WysiwygGrid</id>
-        <version>1.0.0-beta01</version>
+        <version>1.0.0-beta03</version>
         <title>Our Umbraco WYSIWYG Grid</title>
         <authors>Lars-Erik Aabech</authors>
         <owners>Lars-Erik Aabech</owners>
@@ -15,6 +15,7 @@
         <license type="expression">MIT</license>
     </metadata>
     <files>
-        <file src="App_Plugins/Our.Umbraco.WysiwygGrid/**/*.*" target="Content"/>
+      <file src="App_Plugins/Our.Umbraco.WysiwygGrid/**/*.*" target="Content"/>
+      <file src="build/Our.Umbraco.WysiwygGrid.targets" target="buildTransitive"/>
     </files>
 </package>

@@ -1,0 +1,27 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <OurUmbracoWysiwygGridContentFilesPaths>$(MSBuildThisFileDirectory)..\Content\App_Plugins\Our.Umbraco.WysiwygGrid\**\*.*</OurUmbracoWysiwygGridContentFilesPaths>
+  </PropertyGroup>
+
+  <Target Name="CopyOurUmbracoWysiwygGridAssets" BeforeTargets="Build" Condition="'$(TargetFramework.TrimEnd(`0123456789`))' != 'net'">
+    <ItemGroup>
+      <OurUmbracoWysiwygGridContentFiles Include="$(OurUmbracoWysiwygGridContentFilesPaths)" />
+    </ItemGroup>
+    <Message Text="Copying Our.Umbraco.WysiwygGrid files: $(OurUmbracoWysiwygGridContentFilesPaths) - #@(OurUmbracoWysiwygGridContentFiles->Count()) files"  Importance="high" />
+    <Copy
+      SourceFiles="@(OurUmbracoWysiwygGridContentFiles)"
+      DestinationFiles="@(OurUmbracoWysiwygGridContentFiles->'$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.WysiwygGrid\%(RecursiveDir)%(Filename)%(Extension)')"
+      SkipUnchangedFiles="true"
+    />
+  </Target>
+
+  <Target Name="ClearOurUmbracoWysiwygGridAssets" BeforeTargets="Clean" Condition="'$(TargetFramework.TrimEnd(`0123456789`))' != 'net'">
+    <ItemGroup>
+      <OurUmbracoWysiwygGridDir Include="$(MSBuildProjectDirectory)\App_Plugins\Our.Umbraco.WysiwygGrid\" />
+    </ItemGroup>
+    <Message Text="Clear old Our.Umbraco.WysiwygGrid data"  Importance="high" />
+    <RemoveDir Directories="@(OurUmbracoWysiwygGridDir)"  />
+  </Target>
+
+</Project>
